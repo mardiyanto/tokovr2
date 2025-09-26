@@ -119,7 +119,7 @@ try {
                                         <?php foreach ($products as $product): ?>
                                             <tr>
                                                 <td>
-                                                    <img src="<?php echo $product['gambar_produk'] ? '../uploads/' . $product['gambar_produk'] : '../assets/no-image.jpg'; ?>" 
+                                                    <img src="<?php echo $product['gambar_produk'] ? '../uploads/' . $product['gambar_produk'] : '../assets/no-image.svg'; ?>" 
                                                          class="product-image" alt="<?php echo htmlspecialchars($product['nama_produk']); ?>">
                                                 </td>
                                                 <td>

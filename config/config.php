@@ -11,7 +11,7 @@ session_start();
 define('BASE_URL', 'http://localhost/tokovr2/');
 
 // Upload directory
-define('UPLOAD_DIR', 'uploads/');
+define('UPLOAD_DIR', __DIR__ . '/../uploads/');
 
 // Create upload directory if not exists
 if (!file_exists(UPLOAD_DIR)) {
@@ -19,7 +19,7 @@ if (!file_exists(UPLOAD_DIR)) {
 }
 
 // Include database config
-require_once 'config/database.php';
+require_once __DIR__ . '/database.php';
 
 // Helper functions
 function redirect($url) {

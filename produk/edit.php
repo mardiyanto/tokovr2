@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($error)) {
             $gambar_produk = $product['gambar_produk']; // Keep existing image
             
             if (isset($_FILES['gambar_produk']) && $_FILES['gambar_produk']['error'] == 0) {
-                $upload_dir = '../uploads/';
+                $upload_dir = UPLOAD_DIR;
                 $file_extension = strtolower(pathinfo($_FILES['gambar_produk']['name'], PATHINFO_EXTENSION));
                 $allowed_extensions = ['jpg', 'jpeg', 'png', 'gif'];
                 

@@ -137,7 +137,7 @@ try {
                                                 <tr>
                                                     <td>
                                                         <div class="d-flex align-items-center">
-                                                            <img src="<?php echo $item['gambar_produk'] ? '../uploads/' . $item['gambar_produk'] : '../assets/no-image.jpg'; ?>" 
+                                                            <img src="<?php echo $item['gambar_produk'] ? '../uploads/' . $item['gambar_produk'] : '../assets/no-image.svg'; ?>" 
                                                                  class="product-image me-3" alt="<?php echo htmlspecialchars($item['nama_produk']); ?>">
                                                             <div>
                                                                 <h6 class="mb-1"><?php echo htmlspecialchars($item['nama_produk']); ?></h6>

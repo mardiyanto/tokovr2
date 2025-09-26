@@ -204,7 +204,7 @@ try {
                                             <?php foreach ($products as $product): ?>
                                                 <tr>
                                                     <td>
-                                                        <img src="<?php echo $product['gambar_produk'] ? '../uploads/' . $product['gambar_produk'] : '../assets/no-image.jpg'; ?>" 
+                                                        <img src="<?php echo $product['gambar_produk'] ? '../uploads/' . $product['gambar_produk'] : '../assets/no-image.svg'; ?>" 
                                                              class="product-image" alt="<?php echo htmlspecialchars($product['nama_produk']); ?>">
                                                     </td>
                                                     <td>
@@ -288,7 +288,7 @@ try {
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="col-md-4">
-                                                                        <img src="<?php echo $product['gambar_produk'] ? '../uploads/' . $product['gambar_produk'] : '../assets/no-image.jpg'; ?>" 
+                                                                        <img src="<?php echo $product['gambar_produk'] ? '../uploads/' . $product['gambar_produk'] : '../assets/no-image.svg'; ?>" 
                                                                              class="img-fluid rounded" alt="<?php echo htmlspecialchars($product['nama_produk']); ?>">
                                                                     </div>
                                                                     <div class="col-md-8">

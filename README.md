@@ -53,13 +53,18 @@ cd toko-abc
 # Atau extract file zip ke folder web server
 ```
 
-### 3. Konfigurasi Database
+### 3. Instalasi Otomatis (Recommended)
+1. Akses `http://localhost/tokovr2/install.php`
+2. Isi form konfigurasi database
+3. Klik "Install Aplikasi"
+4. Hapus file `install.php` setelah instalasi selesai
+
+### 4. Instalasi Manual
 ```sql
 -- Import file database.sql ke MySQL
 mysql -u root -p < database.sql
 ```
 
-### 4. Konfigurasi Aplikasi
 Edit file `config/database.php`:
 ```php
 private $host = 'localhost';
@@ -76,9 +81,9 @@ chmod 755 assets/
 ```
 
 ### 6. Akses Aplikasi
-- **Website**: http://localhost/toko-abc/
-- **Admin**: http://localhost/toko-abc/auth/login.php
-  - Username: admin
+- **Website**: http://localhost/tokovr2/
+- **Admin**: http://localhost/tokovr2/auth/login.php
+  - Email: admin@tokoabc.com
   - Password: password
 
 ## Struktur File
@@ -114,7 +119,7 @@ tokovr2/
 │   ├── pay.php             # Bayar order
 │   └── complete.php        # Selesaikan order
 ├── assets/
-│   └── no-image.jpg        # Gambar default
+│   └── no-image.svg        # Gambar default
 ├── uploads/                # Folder upload gambar
 ├── database.sql            # Struktur database
 ├── index.php               # Halaman utama
@@ -199,3 +204,4 @@ Untuk pertanyaan atau bantuan, silakan hubungi:
 ---
 
 **Dibuat dengan ❤️ menggunakan PHP, MySQL, dan Bootstrap 5**
+Admin: email admin@tokoabc.com, password password

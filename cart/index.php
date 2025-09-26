@@ -148,7 +148,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                                                     <tr>
                                                         <td>
                                                             <div class="d-flex align-items-center">
-                                                                <img src="<?php echo $item['product']['gambar_produk'] ? '../uploads/' . $item['product']['gambar_produk'] : '../assets/no-image.jpg'; ?>" 
+                                                                <img src="<?php echo $item['product']['gambar_produk'] ? '../uploads/' . $item['product']['gambar_produk'] : '../assets/no-image.svg'; ?>" 
                                                                      class="product-image me-3" alt="<?php echo htmlspecialchars($item['product']['nama_produk']); ?>">
                                                                 <div>
                                                                     <h6 class="mb-1"><?php echo htmlspecialchars($item['product']['nama_produk']); ?></h6>

@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt->execute([$product_id]);
             
             // Delete image file if exists
-            if (!empty($product['gambar_produk']) && file_exists('../uploads/' . $product['gambar_produk'])) {
-                unlink('../uploads/' . $product['gambar_produk']);
+            if (!empty($product['gambar_produk']) && file_exists(UPLOAD_DIR . $product['gambar_produk'])) {
+                unlink(UPLOAD_DIR . $product['gambar_produk']);
             }
             
             echo json_encode(['success' => true, 'message' => 'Product deleted successfully']);

@@ -237,7 +237,7 @@ try {
                     <?php foreach ($products as $product): ?>
                         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                             <div class="card product-card h-100">
-                                <img src="<?php echo $product['gambar_produk'] ? 'uploads/' . $product['gambar_produk'] : 'assets/no-image.jpg'; ?>" 
+                                <img src="<?php echo $product['gambar_produk'] ? 'uploads/' . $product['gambar_produk'] : 'assets/no-image.svg'; ?>" 
                                      class="card-img-top product-image" alt="<?php echo htmlspecialchars($product['nama_produk']); ?>">
                                 <div class="card-body d-flex flex-column">
                                     <h6 class="card-title fw-bold"><?php echo htmlspecialchars($product['nama_produk']); ?></h6>

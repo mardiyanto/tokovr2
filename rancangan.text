@@ -1,0 +1,115 @@
+📌 RANCANGAN APLIKASI E-COMMERCE BERBASIS WEBSITE MOBILE DI TOKO ABC
+1. DATA PRODUK
+•	Table produk
+o	id_produk (PK)
+o	id_kategori (FK)
+o	nama_produk
+o	deskripsi
+o	harga
+o	stok
+o	gambar_produk
+o	status (pending, acc, ditolak)
+o	created_at, updated_at
+•	Fitur
+o	Input produk (oleh kosumen)
+o	Edit produk (oleh kosumen sebelum divalidasi admin)
+o	Hapus produk (oleh kosumen/admin)
+o	Update stok/harga (oleh kosumen setelah disetujui admin)
+________________________________________
+2. DATA KATEGORI PRODUK
+•	Table kategori
+o	id_kategori (PK)
+o	nama_kategori
+o	deskripsi
+o	created_at, updated_at
+•	Fitur
+o	Tambah kategori
+o	Edit kategori
+o	Hapus kategori
+o	Update kategori
+________________________________________
+3. DATA KONSUMEN
+•	Table konsumen
+o	id_konsumen (PK)
+o	nama_lengkap
+o	alamat_lengkap
+o	no_hp
+o	email (unique)
+o	password (hashed)
+o	tanggal_daftar
+•	Fitur
+o	Registrasi konsumen
+o	Login/logout
+o	Update profil (alamat, no_hp, email, password)
+________________________________________
+4. TRANSAKSI PRODUK
+•	Table order
+o	id_order (PK)
+o	id_konsumen (FK)
+o	tanggal_order
+o	total_harga
+o	status_order (pending, dibayar, dikirim, selesai, batal)
+•	Table order_detail
+o	id_detail (PK)
+o	id_order (FK)
+o	id_produk (FK)
+o	jumlah
+o	harga_satuan
+o	subtotal
+•	Fitur
+o	Konsumen bisa memilih produk → masukkan ke keranjang
+o	Checkout (buat order)
+o	Pilih metode pembayaran
+o	Tracking status pesanan
+________________________________________
+5. SISTEM YANG BERJALAN
+1.	Registrasi Konsumen
+o	Konsumen wajib daftar (nama, alamat, no_hp, email, password).
+2.	Input Produk oleh Konsumen
+o	Setelah login, konsumen bisa upload produk beserta gambar.
+3.	Validasi Admin
+o	Admin cek produk yang diinput konsumen.
+o	Produk bisa disetujui (ACC) atau ditolak.
+4.	Transaksi
+o	Konsumen lain bisa membeli produk yang sudah di-ACC.
+o	Order masuk ke sistem → pembayaran → pengiriman.
+________________________________________
+6. HAK AKSES (ROLE)
+•	Admin
+o	Validasi produk
+o	Kelola kategori
+o	Kelola data konsumen
+o	Kelola transaksi
+•	Konsumen (Penjual + Pembeli)
+o	Daftar/login
+o	Input produk (sebagai penjual)
+o	Edit/update produk sebelum ACC
+o	Melakukan transaksi (sebagai pembeli)
+o	Lihat riwayat order
+________________________________________
+7. ALUR APLIKASI (Flow sederhana)
+1.	Konsumen daftar akun
+2.	Login → bisa input produk
+3.	Admin validasi produk
+4.	Produk tampil di halaman utama (hanya yang ACC)
+5.	Konsumen lain bisa beli produk → order dibuat
+6.	Pembayaran → admin verifikasi → barang dikirim
+7.	Order selesai
+🔹 TABEL ADMIN
+Table admin
+•	id_admin (PK)
+•	nama_admin
+•	username (unique)
+•	password (hashed)
+•	email
+•	role (superadmin / staff)
+•	created_at, updated_at
+________________________________________
+🔹 HUBUNGAN BARU
+•	Admin ↔ Produk → admin melakukan validasi (ACC / tolak produk).
+o	Relasi: 1 admin bisa memvalidasi banyak produk.
+o	Produk memiliki field validated_by (FK → id_admin) dan status (pending, acc, tolak).
+________________________________________
+🔹 UPDATE ERD (Relasi Baru)
+•	Admin → Produk (validasi)
+•	Admin juga bisa mengelola kategori dan memantau transaksi.

@@ -15,8 +15,8 @@ Aplikasi e-commerce berbasis website mobile dengan PHP, MySQL, dan Bootstrap 5. 
 - **Dashboard** - Statistik dan overview sistem
 - **Validasi Produk** - Menyetujui atau menolak produk yang diupload konsumen
 - **Kelola Kategori** - Menambah, mengedit, dan menghapus kategori produk
-- **Kelola Order** - Memantau dan mengelola pesanan
-- **Kelola Konsumen** - Melihat data konsumen
+- **Kelola Order** - Memantau dan mengelola pesanan dengan update status
+- **Kelola Konsumen** - Melihat data konsumen dan statistik belanja
 
 ## Teknologi yang Digunakan
 
@@ -100,7 +100,10 @@ tokovr2/
 ├── admin/
 │   ├── dashboard.php       # Dashboard admin
 │   ├── produk.php          # Validasi produk
-│   └── kategori.php        # Kelola kategori
+│   ├── kategori.php        # Kelola kategori
+│   ├── order.php           # Kelola order
+│   ├── order_detail.php    # Detail order admin
+│   └── konsumen.php        # Kelola konsumen
 ├── produk/
 │   ├── tambah.php          # Tambah produk
 │   ├── daftar.php          # Daftar produk
@@ -118,6 +121,8 @@ tokovr2/
 │   ├── cancel.php          # Batalkan order
 │   ├── pay.php             # Bayar order
 │   └── complete.php        # Selesaikan order
+├── profil/
+│   └── index.php           # Profil konsumen
 ├── assets/
 │   └── no-image.svg        # Gambar default
 ├── uploads/                # Folder upload gambar
